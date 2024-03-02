@@ -1,0 +1,267 @@
+:root {
+  /* COLORS */
+  --clr-primary-100: #fff;
+  --clr-primary-100-transparent: #ffffffee;
+
+  --clr-secondary-900: #000;
+  --clr-secondary-900-transparent: #000000ee;
+
+  --clr-accent-blue: #102d5a;
+  --clr-accent-blue-transparent: #102d5aee;
+  --clr-accent-red: #7a0a0a;
+  --clr-accent-red-transparent: #7a0a0aee;
+
+  /* FONT FAMILY */
+  --ff-primary: Georgia, "Times New Roman", Times, serif;
+
+  /* FONT SIZE */
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-600: 1.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: var(--fs-600);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+p,
+button {
+  font-size: var(--fs-400);
+}
+
+button {
+  margin-right: 1rem;
+  background-color: var(--clr-accent-blue);
+  color: var(--clr-primary-100);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  margin-right: 1rem;
+  background-color: var(--clr-accent-blue-transparent);
+  color: var(--clr-primary-100);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+button:active {
+  margin: 0.1rem 1.1rem 0.1rem 0.1rem;
+  padding: 0.4rem 0.9rem;
+}
+
+.book-btn {
+  margin-bottom: 1rem;
+}
+
+header {
+  width: 100%;
+  background-color: var(--clr-accent-blue);
+  color: var(--clr-primary-100);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+/* filter */
+.filters-cont {
+  width: 350px;
+  margin: 0 auto 2rem;
+  font-size: var(--fs-300);
+}
+
+.filters-cont input {
+  font-size: var(--fs-200);
+}
+
+.date-picker {
+  text-align: center;
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+.guests-num-cont {
+  margin-bottom: 1em;
+}
+
+.guests-num-cont select {
+  font-size: var(--fs-200);
+}
+
+.amenities-cont {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25em;
+}
+
+/* accommodation list */
+.accommmodation-list-cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* accommodation component */
+.accommodation-cont {
+  width: 400px;
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  text-align: center;
+  border: 5px solid var(--clr-accent-blue);
+}
+
+.notice {
+  color: var(--clr-accent-red);
+  font-size: var(--fs-300);
+  margin-top: -1rem;
+}
+
+/* modal - confirming reservation */
+.book-details {
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.book-details p {
+  margin: 0.5rem;
+}
+
+.modal {
+  text-align: center;
+  width: 300px;
+  padding: 1rem 1.5rem 2rem;
+  background-color: var(--clr-primary-100);
+  border: 1px solid --clr-accent-blue;
+  border-radius: 10px;
+}
+
+.modal-bckg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--clr-accent-blue-transparent);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* utility */
+.flex {
+  display: flex;
+  background-color: red;
+  width: 500px;
+  border: 2rem black solid;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.margin-bottom-05 {
+  margin-bottom: 0.5em;
+}
+
+/* MEDIA QUERIES */
+/* *********************************** */
+@media (min-width: 800px) {
+  :root {
+    /* FONT SIZE */
+    --fs-200: 1rem;
+    --fs-300: 1.125rem;
+    --fs-400: 1.25rem;
+    --fs-600: 1.625rem;
+  }
+
+  .filters-cont {
+    width: 700px;
+  }
+
+  .guests-num-cond-cont {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .modal {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1350px) {
+  :root {
+    /* FONT SIZE */
+    --fs-200: 1.125rem;
+    --fs-300: 1.25rem;
+    --fs-400: 1.375rem;
+    --fs-600: 1.75rem;
+  }
+
+  .filters-cont {
+    width: 1300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--clr-accent-blue-transparent);
+  }
+
+  .date-picker-cont {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .date-picker {
+    margin: 0;
+    padding: 0 0.375rem;
+  }
+
+  .guests-num-cont {
+    margin-bottom: 0;
+  }
+
+  .amenities-cont {
+    gap: 0.5em;
+    width: 40%;
+    margin: 0;
+  }
+
+  .amenities-cont label {
+    margin-right: 0.5rem;
+  }
+
+  .modal {
+    width: 600px;
+  }
+}
